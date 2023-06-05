@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import LandingPage from './pages/LandingPage'
+import AngerPage from './pages/AngerPage'
+import HappyPage from './pages/HappyPage'
+import Hatepage from './pages/HatePage'
+import SurprisedPage from './pages/SurprisedPage'
+import ShamePage from './pages/ShamePage'
+import SadPage from './pages/SadPage'
+import DisgustedPage from './pages/DisgustedPage'
+import ResentPage from './pages/ResentPage'
+import CuriousPage from './pages/CuriousPage'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    
+      <Router>
+        <div className="App">
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<LandingPage />}/>
+              <Route path="/happy" element={<HappyPage/>}/>
+              <Route path="/hate" element={<Hatepage />}/>
+              <Route path="/anger" element={<AngerPage />}/>
+              <Route path="/surprise" element={<SurprisedPage />}/>
+              <Route path="/shame" element={<ShamePage />}/>
+              <Route path="/sadness" element={<SadPage />}/>
+              <Route path="/resent" element={<ResentPage />}/>
+              <Route path="/disgust" element={<DisgustedPage />}/>
+              <Route path="/curious" element={<CuriousPage />}/>
+            </Routes>
+          </div>
+        </div>
+      </Router>
+    );
+  }
 
 export default App;
+  
