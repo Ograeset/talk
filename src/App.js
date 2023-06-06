@@ -30,6 +30,7 @@ function App() {
               <Route path="/resent" element={<ResentPage />}/>
               <Route path="/disgust" element={<DisgustedPage />}/>
               <Route path="/curious" element={<CuriousPage />}/>
+              <Route path="/curious" element={<CuriousPage />}/>
             </Routes>
           </div>
         </div>
